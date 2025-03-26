@@ -1,5 +1,7 @@
 package DeitelChapter2Algorithm;
 
+import java.util.Arrays;
+
 public class NumberSpiral {
     public static int[][] generateSpiral(int size) {
         int[][] spiral = new int[size][size];
@@ -7,18 +9,23 @@ public class NumberSpiral {
         int left = 0, right = size - 1, top = 0, bottom = size - 1;
 
         while (value <= size * size) {
-            for (int i = left; i <= right; i++) spiral[top][i] = value++;
+            for (int count = left; count <= right; count++) spiral[top][count] = value++;
             top++;
 
-            for (int i = top; i <= bottom; i++) spiral[i][right] = value++;
+            for (int count = top; count <= bottom; count++) spiral[count][right] = value++;
             right--;
 
-            for (int i = right; i >= left; i--) spiral[bottom][i] = value++;
+            for (int count = right; count >= left; count--) spiral[bottom][count] = value++;
             bottom--;
 
-            for (int i = bottom; i >= top; i--) spiral[i][left] = value++;
+            for (int count = bottom; count >= top; count--) spiral[count][left] = value++;
             left++;
         }
         return spiral;
+    }
+
+    public static void main(String[] args) {
+        int[][] spiral = generateSpiral(5);
+        System.out.println(Arrays.deepToString(spiral));
     }
 }
