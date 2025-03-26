@@ -17,7 +17,7 @@ public class NumberSpiral {
             bottom--;
 
             for (int i = bottom; i >= top; i--) spiral[i][left] = value++;
-
+            left++;
         }
         return spiral;
     }
