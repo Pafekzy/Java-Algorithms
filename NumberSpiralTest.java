@@ -11,6 +11,14 @@ public class NumberSpiralTest {
         };
         assertArrayEquals(expected, NumberSpiral.generateSpiral(1));
     }
+    @Test
+    void testSpiralMatrixOfSizeTwo() {
+        int[][] expected = {
+                {1, 2},
+                {4, 3}
+        };
+        assertArrayEquals(expected, NumberSpiral.generateSpiral(2));
+    }
 
     @Test
     void testSpiralMatrixOfSizeThree() {
@@ -21,7 +29,6 @@ public class NumberSpiralTest {
         };
         assertArrayEquals(expected, NumberSpiral.generateSpiral(3));
     }
-
 
 
 
