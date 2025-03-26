@@ -24,8 +24,20 @@ public class NumberSpiral {
         return spiral;
     }
 
+
+    public static void printSpiral(int[][] spiral) {
+        for (int[] row : spiral) {
+            for (int num : row) {
+                // Adjust formatting for alignment
+                System.out.printf("%4d", num); // 4 spaces per number
+            }
+            System.out.println(); // Newline after each row
+        }
+    }
+
+
     public static void main(String[] args) {
         int[][] spiral = generateSpiral(5);
-        System.out.println(Arrays.deepToString(spiral));
+        printSpiral(spiral); // Use the new print method
     }
 }
