@@ -20,6 +20,7 @@ public class TripleNum1EqualsDoubleNum2Checker {
 
         }
 
+
     }
 
 
