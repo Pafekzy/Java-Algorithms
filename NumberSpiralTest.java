@@ -5,6 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class NumberSpiralTest {
 
     @Test
+    void testSpiralMatrixOfSizeOne(){
+        int[][] expected = {
+                {1}
+        };
+        assertArrayEquals(expected, NumberSpiral.generateSpiral(1));
+    }
+
+    @Test
     void testSpiralMatrixOfSizeThree() {
         int[][] expected = {
                 {1, 2, 3},
