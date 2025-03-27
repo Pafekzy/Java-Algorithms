@@ -8,7 +8,7 @@ public class NumberSpiral {
         int value = 1;
         int left = 0, right = size - 1, top = 0, bottom = size - 1;
 
-        while (value <= size * size) {
+        while (value <= size * size-1) {
             for (int count = left; count <= right; count++) spiral[top][count] = value++;
             top++;
 
