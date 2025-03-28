@@ -1,6 +1,5 @@
 package DeitelChapter2Algorithm;
 
-import java.util.Arrays;
 
 public class NumberSpiral {
     public static int[][] generateSpiral(int size) {
