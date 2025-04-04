@@ -11,7 +11,9 @@ public class EnergyCalculator {
         System.out.print("Enter the amount of water in kilograms: ");
         double waterMassKilograms = inputScanner.nextDouble(); // Read the mass of water
 
-
+        // Prompt the user to enter the initial temperature
+        System.out.print("Enter the initial temperature in degrees Celsius: ");
+        double initialTemperatureCelsius = inputScanner.nextDouble(); // Read the initial temperature
 
     }
 }
