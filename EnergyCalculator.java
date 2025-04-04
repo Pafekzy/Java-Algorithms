@@ -19,5 +19,23 @@ public class EnergyCalculator {
         System.out.print("Enter the final temperature in degrees Celsius: ");
         double finalTemperatureCelsius = inputScanner.nextDouble(); // Read the final temperature
 
+        // Declare a variable for energy calculation
+        double energyJoules;
+
+        // Calculate energy using provided formula only if the inputs are valid
+        if (waterMassKilograms > 0 && finalTemperatureCelsius > initialTemperatureCelsius) {
+            // Calculate energy using the formula Q = M * (Tf - Ti) * 4184
+            energyJoules = waterMassKilograms * (finalTemperatureCelsius - initialTemperatureCelsius) * 4184;
+
+            // Output the result
+            System.out.printf("The energy needed to heat the water is: %.2f joules\n", energyJoules); // Print energy with two decimal places
+        } else {
+            // Print an error message for invalid input
+            System.out.println("Invalid input. Please ensure the mass is positive and the final temperature is greater than the initial temperature.");
+        }
+
+        inputScanner.close(); // Close the scanner to free up resources
+
     }
+
 }
