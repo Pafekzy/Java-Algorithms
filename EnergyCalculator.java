@@ -15,5 +15,9 @@ public class EnergyCalculator {
         System.out.print("Enter the initial temperature in degrees Celsius: ");
         double initialTemperatureCelsius = inputScanner.nextDouble(); // Read the initial temperature
 
+        // Prompt the user to enter the final temperature
+        System.out.print("Enter the final temperature in degrees Celsius: ");
+        double finalTemperatureCelsius = inputScanner.nextDouble(); // Read the final temperature
+
     }
 }
